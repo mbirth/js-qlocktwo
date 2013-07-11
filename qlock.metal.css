@@ -1,0 +1,17 @@
+BODY {
+    background-color: black;
+}
+
+#qlocktwo {
+    background-color: silver;
+    background-image: url(brushedmetal.png);
+}
+
+.on {
+    color: white;
+    text-shadow: white 0px 0px 6px;
+}
+
+.off {
+    color: #999;
+}

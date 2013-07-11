@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+    QLOCKTWO
+    after the original QlockTwo at http://qlocktwo.com/
+    This page was written by Markus Birth <markus@birth-online.de>
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QLOCKTWO</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="qlock.core.css" />
+    <link id="cssskin" rel="stylesheet" type="text/css" href="qlock.black.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="qlock.core.js"></script>
+    <script type="text/javascript" src="qlock.de.js"></script>
+    <script type="text/javascript" src="qlock.en.js"></script>
+    <script type="text/javascript" src="qlock.fr.js"></script>
+    <script type="text/javascript" src="qlock.es.js"></script>
+    <script type="text/javascript" src="qlock.jbo.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+
+        $(document).ready( function($) {
+            qlockTwo.setLanguage( qlockTwo.availLangs[0] );
+            qlockTwo.drawClock( '#qlocktwo' );
+            qlockTwo.updateTime();
+        });
+
+        // ]]>
+    </script>
+    <style type="text/css">
+        #hoverme {
+            color: #222;
+        }
+
+        #hoverme:hover {
+            color: gray;
+        }
+
+        #hoverme A {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #hoverme:hover A {
+            color: silver;
+        }
+
+        #hoverme A:hover {
+            font-weight: bold;
+        }
+
+        #heading {
+            clear: both;
+            padding-top: 40px;
+            text-align: center;
+            font-family: "NotCourierSans";
+            font-size: 24pt;
+            font-weight: bold;
+            color: black;
+            text-shadow: gray 0px 0px 5px;
+        }
+
+        #hoverme:hover #heading {
+            text-shadow: white 0px 0px 5px;
+        }
+
+        #hoverme:hover #heading A {
+            color: black;
+        }
+
+        #heading A {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #settings {
+            text-align: center;
+        }
+
+        #footnote {
+            padding-top: 20px;
+            clear: both;
+            text-align: center;
+            font-size: 8pt;
+            font-family: serif;
+        }
+
+        ABBR {
+            cursor: help;
+        }
+    </style>
+</head>
+<body>
+<div id="qlocktwo"></div>
+
+<div id="hoverme">
+<div id="heading"><a href="http://qlocktwo.com/">QLOCKTWO</a></div>
+
+<div id="settings">
+    <div id="languagesettings"></div>
+    <div id="stylesettings">
+        [<a href="#" onclick="switchSkin('black');">black</a>]
+        [<a href="#" onclick="switchSkin('red');">red</a>]
+        [<a href="#" onclick="switchSkin('gray');">gray</a>]
+        [<a href="#" onclick="switchSkin('purple');">purple</a>]
+        [<a href="#" onclick="switchSkin('lime');">lime</a>]
+        [<a href="#" onclick="switchSkin('metal');">metal</a>]
+    </div>
+</div>
+
+<div id="footnote">
+Das Design der originalen Wanduhr stammt von der Firma <em>Biegert &amp; Funk GmbH &amp; Co. KG</em> und ist unter der Nummer <a href="https://register.dpma.de/DPMAregister/gsm/trefferliste?AKZ=402009000849.1">402009000849</a> beim <abbr title="Deutsches Patent- und Markenamt">DPMA</abbr> eingetragen.
+</div>
+</div>
+
+<script type="text/javascript">
+    function switchSkin( style ) {
+        var linkobj = $('#cssskin');
+        var newcss = 'qlock.' + style + '.css';
+        if ( linkobj.attr('href') != newcss ) linkobj.attr( 'href', newcss );
+    }
+
+    for (var i in qlockTwo.availLangs) {
+        $('#languagesettings').append('\n[<a href="#" onclick="qlockTwo.setLanguage( qlockTwo.availLangs['+i+'] ); qlockTwo.updateTime( true );" title="'+qlockTwo.availLangs[i].language+'">'+qlockTwo.availLangs[i].langCode+'</a>]');
+    }
+
+</script>
+
+</body>
+</html>

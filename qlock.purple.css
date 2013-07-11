@@ -1,0 +1,16 @@
+BODY {
+    background-color: black;
+}
+
+#qlocktwo {
+    background-color: #543288;
+}
+
+.on {
+    color: white;
+    text-shadow: white 0px 0px 6px;
+}
+
+.off {
+    color: #42276c;
+}

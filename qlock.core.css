@@ -1,0 +1,49 @@
+BODY {
+    font-family: sans-serif;
+}
+
+#qlocktwo {
+    margin: 0 auto;
+    padding: 10px 15px 30px 15px;
+    width: 13em;
+    font-family: "NotCourierSans", "DejaVu Sans Mono", "Lucida Console", monospace;
+    font-weight: normal;
+    font-size: 30pt;
+}
+
+#matrix {
+    clear: both;
+    text-align: center;
+    letter-spacing: 0.5em;
+    margin-right: -0.5em;
+}
+
+#dot1, #dot4 {
+    float: left;
+}
+
+#dot2, #dot3 {
+    float: right;
+}
+
+#dot1, #dot2, #dot3, #dot4 {
+    font-size: 10pt;
+}
+
+@font-face {
+    font-family: "NotCourierSans";
+    src: local("NotCourierSans.otf"), url("NotCourierSans.otf") format("opentype");
+    font-weight:  400;
+    font-style:   regular;
+    font-variant: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "NotCourierSans";
+    src: local("NotCourierSans-Bold.otf"), url("NotCourierSans-Bold.otf") format("opentype");
+    font-weight:  700;
+    font-style:   regular;
+    font-variant: normal;
+    font-stretch: normal;
+}
